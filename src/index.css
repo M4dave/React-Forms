@@ -5,6 +5,7 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
+  animation: fadeIn 5s;
 }
 
 h2 {
@@ -37,12 +38,32 @@ button {
   border: none;
   font-size: 1.5em;
   font-weight: 400;
-  background-image: radial-gradient(circle, #282c34, #020202);
+  background-image: linear-gradient(120deg, #020202 0%, #fda085 100%);
   color: #61dafb;
   cursor: pointer;
 }
 
 button:hover {
-  background-image: radial-gradient(circle, #020202, #282c34);
+  background-image: linear-gradient(120deg, #fda085 0%, #020202 100%);
   color: #fda085;
+}
+
+@media (max-width: 600px) {
+  input {
+    width: 15em;
+  }
+  button {
+    width: 15em;
+  }
+}
+
+/* animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
