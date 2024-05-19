@@ -17,7 +17,7 @@ export default function Authenticate({ token }) {
         }
       );
 
-      if (!response.ok) throw response;
+      //if (!response.ok) throw response;
       const result = await response.json();
       setSuccessMessage(result.message);
       console.log(result);
@@ -25,6 +25,7 @@ export default function Authenticate({ token }) {
       setError(error.message);
       console.log(error);
     }
+  }
     return (
       <div>
         <h2>Authenticate!</h2>
@@ -33,5 +34,4 @@ export default function Authenticate({ token }) {
         <button onClick={handleClick}>Authenticate Token!</button>
       </div>
     );
-  }
 }
